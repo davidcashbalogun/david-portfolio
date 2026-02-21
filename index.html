@@ -40,27 +40,47 @@
 </head>
 <body>
 
+    <section id="home">
+        <h1>Hi, I'm David</h1>
+        <p>
+            I'm a passionate frontend developer focused on building clean,
+            responsive, and user-friendly wedsites. I enjoy turning ideas
+            into modern digital experiences.
+        </p>
+
+        <nav>
+            <div class="logo">David</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="skills">
+            <div class="card">
+                <h3>HTML</h3>
+                <p>Semantic and structured markup for modern websites.</p>
+            </div>
+
+            <div class="card">
+                <h3>CSS</h3>
+                <p>Responsive layouts, animations, and modern UI design.</p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>Interactive and dynamic web functionality.</p>
+            </div>
+        </div>
+    </section>
+
 <nav>
     <a href="index.html">Home</a> |
     <a href="about.html">About Me</a> |
-    <a href="contact.html">Contact</a>
+    <a href="projects">Projects</a> |
+    <a href="contact">Contact</a>
 </nav>
-    <div class="box">
-
-    <h1>Contact Me</h1>
-
-    <form>
-        <label>Your Name</label><br>
-        <input type="text" placeholder="Enter your name"><br><br>
-
-        <label>Your Email</label><br>
-        <input type="email" placeholder="Enter your email"><br><br>
-
-        <label>Your Message</label><br>
-        <textarea placeholder="Type your message"></textarea><br><br>
-
-        <button>Send Message</button>
-    </form>
     
         <h2>About me</h2>
         <h1>Hello, I am David</h1>
@@ -73,13 +93,26 @@
         <p>I am focused on mastering web development, programming, and software engineering so I can build meaningful projects and a successful future in tech.</p>
         <p>This website marks the beginning of my journey.</p>
 
-        <h2>My Projects</h2>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you'd like to work with me, feel free to reach out.</p>
 
-        <ul class="projects">
-            <li><a href="">Personal Portfolio Website</a></li>
-            <li><a href="">Camry 2008 Fan Page</a></li>
-            <li><a href="">My First Business Website (coming soon)</a></li>
-        </ul>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-card">
+                <h3>Personal Portfolio Website</h3>
+                <p>A responsive portfolio website built using HTML and CSS.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </section>
 </div>
 
 <html>
