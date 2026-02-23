@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -40,14 +41,16 @@
 </head>
 <body>
 
-    <section id="home">
-        <h1>Hi, I'm David</h1>
-        <p>
-            I'm a passionate frontend developer focused on building clean,
-            responsive, and user-friendly wedsites. I enjoy turning ideas
-            into modern digital experiences.
-        </p>
+    <section id="home" class="section">
+        <h1>Hi, I'm David👋</h1>
+        <h2>I am a <span id="typing"></span></h2>
+        <p>I build modern and responsive websites.</p>
 
+        <div class="hero-buttons">
+            <a href="#contact" class="btn">Hire Me</a>
+            <a href="#projects" class="btn secondary">View Projects</a>
+        </div>
+    
         <nav>
             <div class="logo">David</div>
             <ul>
@@ -76,6 +79,8 @@
     </section>
 
 <nav>
+    <button id="theme-toggle">🌙</button>
+    <div class=""></div></button>
     <a href="index.html">Home</a> |
     <a href="about.html">About Me</a> |
     <a href="#projects">Projects</a> |
@@ -93,7 +98,7 @@
         <p>I am focused on mastering web development, programming, and software engineering so I can build meaningful projects and a successful future in tech.</p>
         <p>This website marks the beginning of my journey.</p>
 
-        <section id="contact">
+        <section id="contact" class="section">
             <h2>Contact Me</h2>
             <p>If you'd like to work with me, feel free to reach out.</p>
 
@@ -105,7 +110,7 @@
             </form>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="section">
             <h2>My Projects</h2>
 
             <div class="projects-container">
@@ -121,7 +126,7 @@
                     <p>A functional calculator built with HTML, CSS and JavaScript.</p>
                     <a href="calculator.html" class="btn">View Project</a>
                 </div>
-                
+
             </div>
         </section>
 </div>
@@ -158,6 +163,69 @@
 <footer>
     <p>Built with love by David &copy; 2025</p>
 </footer>
+
+<script>
+    const toggleBtn = document.getElementById("theme-toggle");
+
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        toggleBtn.textContent = "☀️";
+    }
+
+    toggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            toggleBtn.textContent = "☀️";
+            localStorage.setItem("theme", "dark");
+        } else{
+            toggleBtn.textContent = "🌙";
+            localStorage.setItem("theme", "light");
+        }
+    
+    const sections = document.querySelectorAll(".section");
+
+    window.addEventListener("scroll", function () {
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const triggerPoint = windoow.innerHeight - 100;
+
+            if (sectionTop < triggerPoint) {
+                section.classList.add("show");
+            }
+        });
+    });
+
+    window.addEventListener("scroll", revealScetions);
+    window.addEventListener("load", revealScetions);
+
+    const roles = ["Frontend Developer", "Web Designer", "JavaScript Developer"]
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+        const typingElement = document.getElementById("typing");
+        const currentRole = roles[roleIndex];
+
+        if (isDelelting) {
+            typingElement.textContent = currentRole.substring(0,charIndex--);
+        } else {
+            typingElement.textContent = currentRole.substring(0, charIndex++);
+        }
+
+        if (!isDeleting && charIndex === currentRole.length) {
+            setTimeout (() => isDeleting = true, 1000);
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+        }
+
+        setTimeout(typeEffect, isDeleting ? 50 : 100);
+    }
+    typeEffect();
+});
+</script>
 
 </body>
 <html>
@@ -229,4 +297,5 @@ body {
 }
 h1 {
     color: lightblue;
+}
 </style>
