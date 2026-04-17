@@ -1,301 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body { 
-            font-family: Arial;
-            background-color: #f2f2f2;
-            padding: 20px;
-        }
-        h1 {
-            color: blue;
-        }
-        .profile {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 4px solid white;
-        }
-
-    .photo-box {
-        text-align: center;
-    }
-    .btn {
-        background: blue;
-        color: white;
-        padding: 10px 15px;
-        text-decoration: none;
-        border-radius: 6px;
-        display: inline-block;
-    }
-    .btn:hover {
-        background: darkblue;
-    }
-    .box {
-        box-shadow: 0px 0px 10px gray;
-    }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <section id="home" class="section">
-        <h1>Hi, I'm David👋</h1>
-        <h2>I am a <span id="typing"></span></h2>
-        <p>I build modern and responsive websites.</p>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">David</div>
 
-        <div class="hero-buttons">
-            <a href="#contact" class="btn">Hire Me</a>
-            <a href="#projects" class="btn secondary">View Projects</a>
-        </div>
-    
-        <nav>
-            <div class="logo">David</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
 
-        <div class="skills">
-            <div class="card">
-                <h3>HTML</h3>
-                <p>Semantic and structured markup for modern websites.</p>
-            </div>
-
-            <div class="card">
-                <h3>CSS</h3>
-                <p>Responsive layouts, animations, and modern UI design.</p>
-            </div>
-
-            <div class="card">
-                <h3>JavaScript</h3>
-                <p>Interactive and dynamic web functionality.</p>
-            </div>
-        </div>
-    </section>
-
-<nav>
     <button id="theme-toggle">🌙</button>
-    <div class=""></div></button>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About Me</a> |
-    <a href="#projects">Projects</a> |
-    <a href="contact">Contact</a>
-</nav>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="home">
+
+    <div class="home-text">
+      <h1>Hi, I'm David 👋</h1>
+      <h2>I am <span id="typing"></span></h2>
+      <p>I build modern and responsive websites.</p>
+
+      <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Hire Me
+      </button>
+      
+      <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+        View Projects
+      </button>
+    </div>
+
+    <div class="socials">
+      <a href="https://github.com/https://davidcashbalogun.github.io/david-portfolio/" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+    </div>
+
+    <div class="home-img">
+      <img src="myphoto.jpg" alt="My Photo">
+    </div>
     
-        <h2>About me</h2>
-        <h1>Hello, I am David</h1>
-        <div class="photo-box">
-            <img src="myphoto.jpg" class="profile" alt="Photo of David">
-        </div>
-        <p>My name is David, a 100 Level Software Engineering student with strong passion for technology and problem solving.</p>
-        <p>I started learning coding to build solutions that can improve lives and create opportunities, especially in my community.</p>
-        <p>At 19, I achieved one of my personal goals - owning a Camry 2008 model - a reminder that discipline and consistency make dream possible.</p>
-        <p>I am focused on mastering web development, programming, and software engineering so I can build meaningful projects and a successful future in tech.</p>
-        <p>This website marks the beginning of my journey.</p>
+  </section>
 
-        <section id="contact" class="section">
-            <h2>Contact Me</h2>
-            <p>If you'd like to work with me, feel free to reach out.</p>
+  <section id="home" class="hidden">
+  <section id="about" class="hidden">
+  <section id="projects" class="hidden">
+  <section id="contact" class="hidden">
 
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </section>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>Hello! I'm David, a passionate developer.</p>
+  </section>
 
-        <section id="projects" class="section">
-            <h2>My Projects</h2>
+  <section id="skills">
+  <h2>My Skills</h2>
 
-            <div class="projects-container">
+  <div class="skills-container">
 
-                <div class="project-card">
-                    <h3>Personal Portfolio Website</h3>
-                    <p>A responsive portfolio built with HTML and CSS.</p>
-                    <a href="index.html" class="btn">View Project</a>
-                </div>
+    <div class="skill">
+      <p>HTML</p>
+      <div class="progress">
+        <div class="progress-bar html"></div>
+      </div>
+    </div>
 
-                <div class="project-card">
-                    <h3>Simple Calculator App</h3>
-                    <p>A functional calculator built with HTML, CSS and JavaScript.</p>
-                    <a href="calculator.html" class="btn">View Project</a>
-                </div>
+    <div class="skill">
+      <p>CSS</p>
+      <div class="progress">
+        <div class="progress-bar css"></div>
+      </div>
+    </div>
 
-            </div>
-        </section>
-</div>
+    <div class="skill">
+      <p>JavaScript</p>
+      <div class="progress">
+        <div class="progress-bar js"></div>
+      </div>
+    </div>
 
-<html>
+  </div>
+</section>
 
-<head>
-    <style>
-        nav {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+  <!-- PROJECTS -->
+  <section id="projects">
+  <h2>My Projects</h2>
 
-        nav a {
-            text-decoration: center;
-            color: blue;
-            font-weight: bold;
-            margin: 0 10px;
-        }
+  <div class="projects-container">
 
-        nav a:hover {
-            color: red;
-        }
+    <!-- Project 1 -->
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>A modern responsive portfolio built with HTML, CSS, and JavaScript.</p>
 
-        body {
-            background-color: #e6f0ff;
-            font-family: Arial;
-        }
-    </style>
-</head>
+      <div class="project-links">
+        <a href="http://yourproject.com" target="_blank">Live Demo</a>
+        <a href="http://github.com/yourrepo" target="_blank">Code</a>
+      </div>
+    </div>
 
-<body>
+    <!-- Project 2 -->
+    <div class="project-card">
+      <h3>Calculator App</h3>
+      <p>A simple calculator built with JavaScript.</p>
+
+      <div class="project-links">
+        <a href="#">Live Demo</a>
+        <a href="#">Code</a>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="window.open('#')">
+
+  </div>
+</section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <p>Email: davidcashbalogun@gmail.com</p>
+
+    <div class="socials">
+      <a href="https://github.com/https://davidcashbalogun.github.io/david-portfolio/" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
 <footer>
-    <p>Built with love by David &copy; 2025</p>
+  <p>© 2026 David. All rights reserved.</p>
 </footer>
-
-<script>
-    const toggleBtn = document.getElementById("theme-toggle");
-
-    if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark-mode");
-        toggleBtn.textContent = "☀️";
-    }
-
-    toggle.addEventListener("click", function () {
-        document.body.classList.toggle("dark-mode");
-
-        if (document.body.classList.contains("dark-mode")) {
-            toggleBtn.textContent = "☀️";
-            localStorage.setItem("theme", "dark");
-        } else{
-            toggleBtn.textContent = "🌙";
-            localStorage.setItem("theme", "light");
-        }
-    
-    const sections = document.querySelectorAll(".section");
-
-    window.addEventListener("scroll", function () {
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const triggerPoint = windoow.innerHeight - 100;
-
-            if (sectionTop < triggerPoint) {
-                section.classList.add("show");
-            }
-        });
-    });
-
-    window.addEventListener("scroll", revealScetions);
-    window.addEventListener("load", revealScetions);
-
-    const roles = ["Frontend Developer", "Web Designer", "JavaScript Developer"]
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function typeEffect() {
-        const typingElement = document.getElementById("typing");
-        const currentRole = roles[roleIndex];
-
-        if (isDelelting) {
-            typingElement.textContent = currentRole.substring(0,charIndex--);
-        } else {
-            typingElement.textContent = currentRole.substring(0, charIndex++);
-        }
-
-        if (!isDeleting && charIndex === currentRole.length) {
-            setTimeout (() => isDeleting = true, 1000);
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-        }
-
-        setTimeout(typeEffect, isDeleting ? 50 : 100);
-    }
-    typeEffect();
-});
-</script>
-
-</body>
-<html>
-<style>
-body {
-    background-color: #e6f0ff;
-    font-family: Arial;
-}
-.box {
-    background: White;
-    padding: 15px;
-    border-radius: 10px;
-    border-left: 5px solid blue;
-}
-h1 {
-    color: blue;
-}
-
-.skills {
-    background: #1e1e1e;
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-</style>
-
-<style>
-body {
-
-}
-</style>
-<h2>My Skills & Journey</h2>
-
-<div class="skills">
-    <p>. HTML - Beginner</p>
-    <p>. CSS - Starting Today</p>
-    <p>. JavaScript - Coming Soon</p>
-    <p>. Program Solving - Growing</p>
-    <p>. Software Engineering Student at OOU</p>
-<div class="skills">
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">Problem Solving</div>
-</div>
-<html>
-<style>
-.skills {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-.skill {
-    background: blue;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
-}
-body {
-    background-color: black;
-    color: white;
-    font-family: Arial;
-}
-.box {
-    background: #121212;
-    padding: 15px;
-    border-radius: 10px;
-    border-left: 5px solid gray;
-}
-h1 {
-    color: lightblue;
-}
-</style>
